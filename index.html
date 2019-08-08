@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bentham&display=swap" rel="stylesheet">
+    <title>&#x2606; MikaYuu Week 2019 &#x2661;</title>
+  </head>
+
+  <body>
+    <div v-cloak id="app" :class="'color-' + day.theme">
+      <div class="day-background">
+        <img v-if="day.background" :src="day.background" class="cover-tile">
+        <img v-if="day.foreground" :src="day.foreground" class="side-image">
+      </div>
+      <div class="main container">
+        <p v-if="day.text" class="title has-text-centered">{{ day.text }}</p>
+        <div class="tile is-ancestor">
+          <div class="tile is-parent is-3 is-vertical">
+            <mikayuu-flower :flower="day.flower"></mikayuu-flower>
+            <mikayuu-color :color="day.color"></mikayuu-color>
+          </div>
+          <div class="tile is-parent is-4">
+            <mikayuu-image :image="day.image"></mikayuu-image>
+          </div>
+          <div class="tile is-5 is-vertical">
+            <div class="tile is-parent">
+              <mikayuu-special :special="day.special"></mikayuu-special>
+            </div>
+            <div class="tile">
+              <div class="tile is-parent">
+                <mikayuu-anim :anim="day.anim"></mikayuu-anim>
+              </div>
+              <div class="tile is-parent">
+                <mikayuu-quote :quote="day.quote"></mikayuu-quote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="container">
+        <a href="https://mikayuuweek.tumblr.com/">mikayuuweek2019</a>
+        <button @click="setDay(-1)">-</button>
+        <button @click="setDay( 1)">+</button>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
