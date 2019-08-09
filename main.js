@@ -4,7 +4,7 @@ let day_offset = 3
 let today = 0
 
 // load from hash
-let _hash = parseInt(window.location.hash.slice(1), 10);
+let _hash = parseInt(window.location.hash.slice(1), 10)
 if (_hash != NaN && _hash > 0 && _hash < 8) {
   today = _hash - 1
 }
@@ -48,7 +48,7 @@ Vue.component('mikayuu-image', {
   },
   template: `
   <div class="tile is-child box" style="padding: 0; overflow: hidden">
-    <img :src="image" alt="mikayuu drawing" class="cover-tile">
+    <img :src="image" alt="illustration" class="cover-tile">
   </div>
   `
 })
@@ -62,20 +62,36 @@ Vue.component('mikayuu-special', {
     }
   },
   template: `
-  <div class="tile is-child box" style="padding: 0;">
-    <button class="button cover-tile" @click="eventPerform(special.event)">
-      <img v-if="special.image"></img>
+  <div class="tile is-child box" style="padding: 0; overflow: hidden">
+    <button class="spec button cover-tile" @click="eventPerform(special.event)">
+      <img v-if="special.image" :src="special.image" class="cover-tile">
+      <div class="fixed">
+        <transition enter-active-class="animated fadeIn">
+          <img v-if="secondImage" :src="special.image2" class="cover-tile">
+        </transition>
+      </div>
       <p v-if="special.text">{{ special.text }}</p>
     </button>
   </div>
   `,
+  data() {
+    return {
+      secondImage: false
+    }
+  },
   methods: {
     eventPerform(event) {
-      switch(event) {
+      console.log(event)
+      switch (event) {
         case 1:
+          this.secondImage = true
+          break
         case 2:
         case 3:
         case 4:
+          app.day.specText = 'are you still my family?'
+          app.day.theme = 'dark-green'
+          break
         case 5:
         case 6:
           app.setDay(1)
@@ -100,14 +116,14 @@ Vue.component('mikayuu-anim', {
   <div class="tile is-child box expand-tile"
     @mouseenter="hover" @mouseleave="unhover"
   >
-    <div :style="fixed">
+    <div class="fixed">
       <img :src="anim.images[0]" alt="animation 1" class="cover-tile">
     </div>
     <transition
       :enter-active-class="anim.enter"
       :leave-active-class="anim.leave"
     >
-      <div v-show="hovered" :style="fixed">
+      <div v-show="hovered" class="fixed">
         <img :src="anim.images[1]" alt="animation 2" class="cover-tile">
       </div>
     </transition>
@@ -116,14 +132,7 @@ Vue.component('mikayuu-anim', {
   data() {
     return {
       hovered: false,
-      hoverable: true,
-      fixed: {
-        position: 'absolute',
-        top: '0',
-        left: '0',
-        width: '100%',
-        height: '100%'
-      }
+      hoverable: true
     }
   },
   methods: {

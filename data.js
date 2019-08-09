@@ -1,4 +1,13 @@
 // data
+// %done:  8/47
+// red:    5/7
+// orange: 0/5
+// yellow: 0/5
+// green:  1/8
+// blue:   2/5
+// purple: 2/7
+// black:  0/5
+// white:  1/5
 let day = [
   // day 1
   {
@@ -6,15 +15,19 @@ let day = [
     background: 'blood.jpg',
     flower: {
       name: 'amaryllis',
-      image: ''
+      image: 'test.jpg'
     },
     color: 'linear-gradient(to top, #46080b, #ff0000)',
-    image: '',
-    special: '<p>Day 1</p>', // click to make mika's eyes red
+    image: 'test.jpg',
+    special: {
+      image: 'mika_eyes_blue.jpg',
+      image2: 'mika_eyes_red.jpg',
+      event: 1
+    },
     anim: {
-      images: ['', ''], // heart, blood vial
-      enter: 'animated fadeInDown',
-      leave: 'animated fadeOutUp'
+      images: ['heart.jpg', 'yuu_heart.jpg'], // heart, blood vial
+      enter: 'animated flipInY',
+      leave: 'animated flipOutY'
     },
     quote: {
       text:
@@ -34,13 +47,14 @@ let day = [
     theme: 'orange',
     flower: {
       name: 'chrysanthemum',
-      image: ''
+      image: 'test.jpg',
     },
     color: '#ff764a',
-    image: '',
-    special: '<p>Day 2</p>',
+    image: 'test.jpg',
+    special: {
+    },
     anim: {
-      images: ['', ''],
+      images: ['test.jpg', 'test.jpg'],
       enter: 'animated rotateIn',
       leave: 'animated rotateOut'
     },
@@ -60,13 +74,13 @@ let day = [
     theme: 'yellow',
     flower: {
       name: 'sunflower',
-      image: ''
+      image: 'test.jpg'
     },
-    color: 'yellow',
-    image: '',
-    special: '<p>Day 3</p>',
+    color: '#ffffcc',
+    image: 'test.jpg',
+    special: {},
     anim: {
-      images: ['', ''],
+      images: ['test.jpg', 'test.jpg'],
       enter: 'animated lightSpeedIn',
       leave: 'animated lightSpeedOut'
     },
@@ -77,23 +91,26 @@ let day = [
       link: 'https://archiveofourown.org/works/4201602/',
       css: {
         fontFamily: '"Bentham", serif',
-        fontWeight: 'lighter'
+        fontWeight: 'lighter',
+        lineHeight: '1.2'
       }
     }
   },
   // day 4
   {
-    // bg: set text 'are you still my family'
     theme: 'green',
     flower: {
       name: 'hydrangea',
-      image: ''
+      image: 'test.jpg'
     },
     color: '#80d2c2',
-    image: '', // family photo
-    special: '<p>Day 4</p>', // map - breaks, blood splatter on family, shadow in front appears
+    image: 'test.jpg', // family photo
+    special: {
+      image: '', // map
+      event: 4
+    },
     anim: {
-      images: ['', ''], // yuu eye, yuu sleeve & sword
+      images: ['test.jpg', 'test.jpg'], // yuu eye, yuu sleeve & sword
       enter: 'animated flipInX',
       leave: 'animated flipOutX'
     },
@@ -104,7 +121,10 @@ let day = [
       by: 'sutera',
       link: 'https://archiveofourown.org/works/4157064',
       css: {
-        textAlign: 'right'
+        color: '#ecd6b5',
+        textAlign: 'center',
+        fontFamily: '"IM Fell Double Pica", serif',
+        fontWeight: 'lighter'
       }
     }
   },
@@ -113,15 +133,17 @@ let day = [
     theme: 'blue',
     flower: {
       name: 'forget-me-not',
-      image: ''
+      image: 'test.jpg'
     },
     color: '#ccffff',
-    image: '', // mika
-    special: '<p>Day 5</p>',
+    image: 'test.jpg', // mika
+    special: {
+      image: 'twelve_to_one.png'
+    }, // only has an event that lanuches a flying yuu
     anim: {
-      images: ['sky.jpg', ''],
-      enter: 'animated rotateInUpLeft',
-      leave: 'animated rotateOutDownLeft'
+      images: ['sky.jpg', 'promise.png'],
+      enter: 'animated fadeInUp',
+      leave: 'animated fadeOut'
     },
     quote: {
       text:
@@ -142,15 +164,17 @@ let day = [
     foreground: 'star_watching.png',
     flower: {
       name: 'lavender',
-      image: ''
+      image: 'test.jpg'
     },
     color: '#cc99ff',
-    image: '', // sleepy mkys
-    special: '<p>Day 6</p>',
+    image: 'test.jpg', // sleepy mkys
+    special: {
+      image: ''
+    },
     anim: {
-      images: ['', ''],
-      enter: 'animated rotateIn',
-      leave: 'animated rotateOut'
+      images: ['test.jpg', 'test.jpg'],
+      enter: 'animated rotateInUpLeft',
+      leave: 'animated rotateOutDownLeft'
     },
     quote: {
       text:
@@ -169,16 +193,16 @@ let day = [
     theme: 'black',
     flower: {
       name: 'black dahlia',
-      image: ''
+      image: 'test.jpg'
     },
     color: 'linear-gradient(to bottom right, black, white)',
-    image: '', // yuu seraph in white
+    image: 'test.jpg', // yuu seraph in white
     special: {
       text: 'Black',
       event: 6
     },
     anim: {
-      images: ['', ''],
+      images: ['test.jpg', 'test.jpg'],
       enter: 'animated jackInTheBox',
       leave: 'animated zoomOut'
     },
@@ -199,29 +223,27 @@ let day = [
     theme: 'white',
     flower: {
       name: 'lily of the valley',
-      image: ''
+      image: 'test.jpg'
     },
     color: 'linear-gradient(to bottom right, black, white)',
-    image: '', // mika seraph in black
+    image: 'test.jpg', // mika seraph in black
     special: {
       text: 'White',
       event: 7
     },
     anim: {
-      images: ['', ''], // feathers
+      images: ['feathers.jpg', 'test.jpg'], // feathers
       enter: 'animated jackInTheBox',
       leave: 'animated zoomOut'
     },
     quote: {
       text:
-        "“I can't believe this is real,” Yuu says with a chuckle.\n“Me either,” Mika says, and he takes Yuu’s hand simply because he can.",
+        "“I can't believe this is real,” Yuu says with a chuckle.\n\n“Me either,” Mika says, and he takes Yuu’s hand simply because he can.",
       fic: 'The End',
       by: 'Sarafaith',
       link: 'https://archiveofourown.org/works/11383605',
       css: {
         whiteSpace: 'pre-wrap',
-        fontFamily: '"IM Fell Double Pica", serif',
-        fontWeight: 'lighter'
       }
     }
   }

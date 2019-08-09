@@ -10,7 +10,7 @@ footer.container {
   margin-top: 1rem;
 }
 
-.day-background {
+.day-background, .spec-background {
   position: fixed;
   top: 0;
   left: 0;
@@ -25,7 +25,13 @@ footer.container {
 }
 
 .main {
-  margin-top: 3rem;
+  margin-top: 4rem;
+}
+
+.spec {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 .subtitle a {
@@ -42,7 +48,11 @@ footer.container {
 .color-red .box {
   background-color: #ff2222aa;
 }
-.color-red a, .color-red .subtitle {
+.color-red a {
+  color: #ff2222;
+}
+.color-red .subtitle,
+.color-red .subtitle a:not(:hover) {
   color: #550000;
 }
 
@@ -52,19 +62,51 @@ footer.container {
 .color-orange .box {
   background-color: #ffcc99;
 }
+.color-orange a {
+  color: #009999;
+}
 
 .color-yellow .day-background {
-  /* circle gradient of the sun */
+  background: radial-gradient(at top, #ffddbb, #ffffdd);
+}
+.color-yellow a {
+  color: #ffaa77;
 }
 
 .color-green .day-background {
   background-color: #66c1b2;
 }
-.color-green .box {
+.color-green a,
+.color-dark-green a {
+  color: #295a4f;
+}
+.color-green .box,
+.color-dark-green .box {
   background-color: #295a4f;
 }
-.color-green p {
+.color-green .subtitle,
+.color-dark-green .subtitle {
   color: #ecd6b5;
+}
+.color-green .subtitle a:not(:hover),
+.color-dark-green .subtitle a:not(:hover) {
+  color: #66c1b2;
+}
+
+.color-dark-green .day-background {
+  background-color: #66c1b2;
+}
+.color-dark-green .spec-background {
+  background: linear-gradient(#002211 40%, #44af90);
+}
+.color-dark-green .side-image {
+  left: 0;
+}
+.color-dark-green .spec-background p {
+  padding-top: 1rem;
+  color: white;
+  text-shadow: 0 0 10px white;
+  font-family: 'IM Fell Double Pica', serif;
 }
 
 .color-blue .day-background {
@@ -75,7 +117,6 @@ footer.container {
 }
 
 .color-purple .day-background {
-  /* starry night sky */
   background-color: rgb(35, 7, 66);
 }
 .color-purple .box {
@@ -84,16 +125,28 @@ footer.container {
 .color-purple .subtitle {
   color: white;
 }
-.color-purple .subtitle a {
+.color-purple footer a:hover {
+  color: #00eeee;
+}
+.color-purple .subtitle a:not(:hover) {
   color: #00eeee;
 }
 
 .color-black .day-background {
   background-color: #2a2a2a;
 }
-
 .color-black .box {
   background-color: #4a4a4a;
+}
+.color-black .subtitle {
+  text-align: right;
+  color: #aaaaaa;
+}
+.color-black a {
+  color: #aaaaaa;
+}
+.color-black a:hover {
+  color: gray;
 }
 
 .expand-tile {
@@ -108,11 +161,23 @@ footer.container {
   object-fit: cover;
 }
 
+.fixed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 @media (max-width: 768px) {
   .container {
     max-width: 90%;
   }
   footer.container {
     margin-bottom: 10vh;
+  }
+  .box {
+    display: flex;
+    overflow: hidden;
   }
 }

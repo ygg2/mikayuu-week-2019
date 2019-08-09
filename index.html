@@ -15,11 +15,18 @@
   <body>
     <div v-cloak id="app" :class="'color-' + day.theme">
       <div class="day-background">
+        <transition enter-active-class="animated fadeIn">
+          <div v-if="day.specText" class="spec-background">
+            <img src="stab.png" class="side-image">
+            <p class="title has-text-centered">
+              {{ day.specText }}
+            </p>
+          </div>
+        </transition>
         <img v-if="day.background" :src="day.background" class="cover-tile">
         <img v-if="day.foreground" :src="day.foreground" class="side-image">
       </div>
       <div class="main container">
-        <p v-if="day.text" class="title has-text-centered">{{ day.text }}</p>
         <div class="tile is-ancestor">
           <div class="tile is-parent is-3 is-vertical">
             <mikayuu-flower :flower="day.flower"></mikayuu-flower>
