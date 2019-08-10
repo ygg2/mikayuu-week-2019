@@ -1,5 +1,5 @@
 // data
-// %done:  8/47
+// %done:  11/47
 // red:    5/7
 // orange: 0/5
 // yellow: 0/5
@@ -15,10 +15,10 @@ let day = [
     background: 'blood.jpg',
     flower: {
       name: 'amaryllis',
-      image: 'test.jpg'
+      image: ''
     },
     color: 'linear-gradient(to top, #46080b, #ff0000)',
-    image: 'test.jpg',
+    image: '',
     special: {
       image: 'mika_eyes_blue.jpg',
       image2: 'mika_eyes_red.jpg',

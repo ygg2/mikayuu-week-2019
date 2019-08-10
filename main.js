@@ -48,7 +48,7 @@ Vue.component('mikayuu-image', {
   },
   template: `
   <div class="tile is-child box" style="padding: 0; overflow: hidden">
-    <img :src="image" alt="illustration" class="cover-tile">
+    <img :src="image" alt="placeholder" class="cover-tile">
   </div>
   `
 })
