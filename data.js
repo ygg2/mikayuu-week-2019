@@ -1,13 +1,14 @@
-// data
-// %done:  11/47
-// red:    5/7
-// orange: 0/5
-// yellow: 0/5
-// green:  1/8
-// blue:   2/5
-// purple: 2/7
-// black:  0/5
-// white:  1/5
+// data 4294967295
+// the most aesthetic: red, yellow, purple
+// %done:  14/45
+// red:    6/7 (red mika eyes)
+// orange: 0/5 (idk)
+// yellow: 1/5 (idk)
+// green:  1/8 (take. the map.)
+// blue:   3/5 (flying yuu?)
+// purple: 2/7 (honestly what does this one do)
+// black:  0/4 (switch theme)
+// white:  1/4 (switch theme)
 let day = [
   // day 1
   {
@@ -15,7 +16,8 @@ let day = [
     background: 'blood.jpg',
     flower: {
       name: 'amaryllis',
-      image: ''
+      image: 'amaryllis.png',
+      description: 'Pride\nShyness\nStrength of Love'
     },
     color: 'linear-gradient(to top, #46080b, #ff0000)',
     image: '',
@@ -47,12 +49,12 @@ let day = [
     theme: 'orange',
     flower: {
       name: 'chrysanthemum',
-      image: 'test.jpg',
+      image: 'chrysanthemum.png',
+      description: 'Nobility\nRejuvenation\nVirtue\nStrength'
     },
     color: '#ff764a',
     image: 'test.jpg',
-    special: {
-    },
+    special: {},
     anim: {
       images: ['test.jpg', 'test.jpg'],
       enter: 'animated rotateIn',
@@ -74,7 +76,8 @@ let day = [
     theme: 'yellow',
     flower: {
       name: 'sunflower',
-      image: 'test.jpg'
+      image: 'sunflower.jpg',
+      description: 'Devotion\nLoyalty\nYearning'
     },
     color: '#ffffcc',
     image: 'test.jpg',
@@ -101,7 +104,8 @@ let day = [
     theme: 'green',
     flower: {
       name: 'hydrangea',
-      image: 'test.jpg'
+      image: 'hydrangea.png',
+      description: 'Fickleness\nApology\nUnity\nFamily'
     },
     color: '#80d2c2',
     image: 'test.jpg', // family photo
@@ -133,10 +137,11 @@ let day = [
     theme: 'blue',
     flower: {
       name: 'forget-me-not',
-      image: 'test.jpg'
+      image: 'forget_me_not.png',
+      description: 'Remembrance\nConnection\nTrue Love'
     },
     color: '#ccffff',
-    image: 'test.jpg', // mika
+    image: 'mika_water.jpg', // mika
     special: {
       image: 'twelve_to_one.png'
     }, // only has an event that lanuches a flying yuu
@@ -164,7 +169,8 @@ let day = [
     foreground: 'star_watching.png',
     flower: {
       name: 'lavender',
-      image: 'test.jpg'
+      image: 'test.jpg',
+      description: 'Patience\nSerenity\nSilence'
     },
     color: '#cc99ff',
     image: 'test.jpg', // sleepy mkys
@@ -193,7 +199,8 @@ let day = [
     theme: 'black',
     flower: {
       name: 'black dahlia',
-      image: 'test.jpg'
+      image: 'test.jpg',
+      description: 'Elegance\nMajesty\nInstability'
     },
     color: 'linear-gradient(to bottom right, black, white)',
     image: 'test.jpg', // yuu seraph in white
@@ -223,7 +230,8 @@ let day = [
     theme: 'white',
     flower: {
       name: 'lily of the valley',
-      image: 'test.jpg'
+      image: 'test.jpg',
+      description: 'Happiness\nModesty\nPurity'
     },
     color: 'linear-gradient(to bottom right, black, white)',
     image: 'test.jpg', // mika seraph in black
@@ -243,7 +251,7 @@ let day = [
       by: 'Sarafaith',
       link: 'https://archiveofourown.org/works/11383605',
       css: {
-        whiteSpace: 'pre-wrap',
+        whiteSpace: 'pre-wrap'
       }
     }
   }

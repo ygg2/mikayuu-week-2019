@@ -18,6 +18,10 @@ footer.container {
   height: 100vh;
 }
 
+.box {
+  overflow: hidden;
+}
+
 .side-image {
   position: fixed;
   bottom: 0;
@@ -31,6 +35,16 @@ footer.container {
 .spec {
   margin: 0;
   padding: 0;
+  border: none;
+}
+
+.is-filled {
+  padding: 0;
+  overflow: hidden;
+}
+
+.no-background {
+  background: transparent;
   border: none;
 }
 
@@ -174,7 +188,7 @@ footer.container {
     max-width: 90%;
   }
   footer.container {
-    margin-bottom: 10vh;
+    margin-bottom: 15vh;
   }
   .box {
     display: flex;

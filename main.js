@@ -18,10 +18,39 @@ Vue.component('mikayuu-flower', {
     }
   },
   template: `
-  <div class="tile is-child box">
-    <img :src="flower.image" :alt="flower.name">
+  <div class="tile is-child box is-filled">
+    <button class="button no-background cover-tile" @click="toggleContent">
+      <img :src="flower.image" :alt="flower.name">
+      <transition
+        enter-active-class="animated slideInDown faster"
+        leave-active-class="animated slideOutUp faster"
+      >
+        <div
+          v-show="active"
+          class="fixed level is-mobile"
+          style="background-color: #00000077"
+        >
+          <div class="level-item">
+            <div>
+              <p class="title is-4 has-text-white">{{ flower.name }}</p>
+              <p class="has-text-white" style="white-space: pre-wrap">{{ flower.description }}</p>
+            </div>
+          </div>
+        </div>
+      </transition>
+    </button>
   </div>
-  `
+  `,
+  data() {
+    return {
+      active: false
+    }
+  },
+  methods: {
+    toggleContent() {
+      this.active = !this.active
+    },
+  }
 })
 
 // color, bottom left
@@ -47,7 +76,7 @@ Vue.component('mikayuu-image', {
     }
   },
   template: `
-  <div class="tile is-child box" style="padding: 0; overflow: hidden">
+  <div class="tile is-child box is-filled">
     <img :src="image" alt="placeholder" class="cover-tile">
   </div>
   `
@@ -62,7 +91,7 @@ Vue.component('mikayuu-special', {
     }
   },
   template: `
-  <div class="tile is-child box" style="padding: 0; overflow: hidden">
+  <div class="tile is-child box is-filled">
     <button class="spec button cover-tile" @click="eventPerform(special.event)">
       <img v-if="special.image" :src="special.image" class="cover-tile">
       <div class="fixed">
