@@ -124,7 +124,7 @@ footer.container {
 }
 
 .color-blue .day-background {
-  background-color: #bbddee;
+  background: linear-gradient(#ddddee, #bbddee, #9effff);
 }
 .color-blue .box {
   background-color: #cceeff;

@@ -1,11 +1,11 @@
 // data 4294967295
 // the most aesthetic: red, yellow, purple
 // %done:  14/45
-// red:    6/7 (red mika eyes)
-// orange: 0/5 (idk)
-// yellow: 1/5 (idk)
-// green:  1/8 (take. the map.)
-// blue:   3/5 (flying yuu?)
+// red:    6/7
+// orange: 1/5 (idk)
+// yellow: 1/5 (idk) (keep the images white!!)
+// green:  2/8
+// blue:   4/5 (flying yuu?)
 // purple: 2/7 (honestly what does this one do)
 // black:  0/4 (switch theme)
 // white:  1/4 (switch theme)
@@ -20,7 +20,7 @@ let day = [
       description: 'Pride\nShyness\nStrength of Love'
     },
     color: 'linear-gradient(to top, #46080b, #ff0000)',
-    image: '',
+    image: 'sanguinem.png',
     special: {
       image: 'mika_eyes_blue.jpg',
       image2: 'mika_eyes_red.jpg',
@@ -53,10 +53,10 @@ let day = [
       description: 'Nobility\nRejuvenation\nVirtue\nStrength'
     },
     color: '#ff764a',
-    image: 'test.jpg',
+    image: 'fireyuu.jpg',
     special: {},
     anim: {
-      images: ['test.jpg', 'test.jpg'],
+      images: ['', ''],
       enter: 'animated rotateIn',
       leave: 'animated rotateOut'
     },
@@ -80,10 +80,10 @@ let day = [
       description: 'Devotion\nLoyalty\nYearning'
     },
     color: '#ffffcc',
-    image: 'test.jpg',
+    image: '',
     special: {},
     anim: {
-      images: ['test.jpg', 'test.jpg'],
+      images: ['', ''],
       enter: 'animated lightSpeedIn',
       leave: 'animated lightSpeedOut'
     },
@@ -108,13 +108,13 @@ let day = [
       description: 'Fickleness\nApology\nUnity\nFamily'
     },
     color: '#80d2c2',
-    image: 'test.jpg', // family photo
+    image: '', // family photo
     special: {
       image: '', // map
       event: 4
     },
     anim: {
-      images: ['test.jpg', 'test.jpg'], // yuu eye, yuu sleeve & sword
+      images: ['', ''], // yuu eye, yuu sleeve & sword
       enter: 'animated flipInX',
       leave: 'animated flipOutX'
     },
@@ -169,16 +169,16 @@ let day = [
     foreground: 'star_watching.png',
     flower: {
       name: 'lavender',
-      image: 'test.jpg',
+      image: '',
       description: 'Patience\nSerenity\nSilence'
     },
     color: '#cc99ff',
-    image: 'test.jpg', // sleepy mkys
+    image: '', // sleepy mkys
     special: {
       image: ''
     },
     anim: {
-      images: ['test.jpg', 'test.jpg'],
+      images: ['', ''],
       enter: 'animated rotateInUpLeft',
       leave: 'animated rotateOutDownLeft'
     },
@@ -199,17 +199,17 @@ let day = [
     theme: 'black',
     flower: {
       name: 'black dahlia',
-      image: 'test.jpg',
+      image: '',
       description: 'Elegance\nMajesty\nInstability'
     },
     color: 'linear-gradient(to bottom right, black, white)',
-    image: 'test.jpg', // yuu seraph in white
+    image: '', // yuu seraph in white
     special: {
       text: 'Black',
       event: 6
     },
     anim: {
-      images: ['test.jpg', 'test.jpg'],
+      images: ['', ''],
       enter: 'animated jackInTheBox',
       leave: 'animated zoomOut'
     },
@@ -230,17 +230,17 @@ let day = [
     theme: 'white',
     flower: {
       name: 'lily of the valley',
-      image: 'test.jpg',
+      image: '',
       description: 'Happiness\nModesty\nPurity'
     },
     color: 'linear-gradient(to bottom right, black, white)',
-    image: 'test.jpg', // mika seraph in black
+    image: '', // mika seraph in black
     special: {
       text: 'White',
       event: 7
     },
     anim: {
-      images: ['feathers.jpg', 'test.jpg'], // feathers
+      images: ['feathers.jpg', ''], // feathers
       enter: 'animated jackInTheBox',
       leave: 'animated zoomOut'
     },

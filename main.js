@@ -62,7 +62,7 @@ Vue.component('mikayuu-color', {
     }
   },
   template: `
-  <div class="tile is-child box" :style="{ background: color }">
+  <div class="tile is-child box is-filled" :style="{ background: color }">
   </div>
   `
 })
