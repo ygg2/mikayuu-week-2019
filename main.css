@@ -1,6 +1,5 @@
 html {
   overflow-y: auto;
-  min-height: 100vh;
 }
 
 [v-cloak] {
