@@ -152,7 +152,7 @@ let day = [
     },
     quote: {
       text:
-        'He closed his eyes to bask in the sunlight, hoping he could open his eyes to see the blond’s eyes instead.',
+        'The blue sky welcomed him, and Yuu kept looking up at the warm spring sky. He sighed. It was the same color as Mika’s cerulean eyes.',
       fic: 'Always with You',
       by: 'Tsukimi11',
       link: 'https://archiveofourown.org/works/11600121/chapters/26074983',
