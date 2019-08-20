@@ -1,12 +1,12 @@
 // data 4294967295
 // the most aesthetic: red, yellow, purple
-// %done:  14/45
+// %done:  19/45
 // red:    6/7
-// orange: 1/5 (idk)
+// orange: 2/5 (idk)
 // yellow: 1/5 (idk) (keep the images white!!)
 // green:  2/8
-// blue:   4/5 (flying yuu?)
-// purple: 2/7 (honestly what does this one do)
+// blue:   5/5
+// purple: 4/7 (honestly what does this one do)
 // black:  0/4 (switch theme)
 // white:  1/4 (switch theme)
 let day = [
@@ -143,8 +143,10 @@ let day = [
     color: '#ccffff',
     image: 'mika_water.jpg', // mika
     special: {
-      image: 'twelve_to_one.png'
-    }, // only has an event that lanuches a flying yuu
+      image: 'twelve_to_one.png',
+      event: 5,
+      yuu: true
+    }, 
     anim: {
       images: ['sky.jpg', 'promise.png'],
       enter: 'animated fadeInUp',
@@ -178,9 +180,9 @@ let day = [
       image: ''
     },
     anim: {
-      images: ['', ''],
-      enter: 'animated rotateInUpLeft',
-      leave: 'animated rotateOutDownLeft'
+      images: ['starmie.png', 'staryu.png'],
+      enter: 'animated rotateInDownLeft',
+      leave: 'animated rotateOutUpLeft'
     },
     quote: {
       text:

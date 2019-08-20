@@ -49,7 +49,7 @@ Vue.component('mikayuu-flower', {
   methods: {
     toggleContent() {
       this.active = !this.active
-    },
+    }
   }
 })
 
@@ -105,7 +105,9 @@ Vue.component('mikayuu-special', {
   `,
   data() {
     return {
-      secondImage: false
+      secondImage: false,
+      yuuLaunched: false,
+      yuuCounter: 0
     }
   },
   methods: {
@@ -122,6 +124,35 @@ Vue.component('mikayuu-special', {
           app.day.theme = 'dark-green'
           break
         case 5:
+          if (!this.yuuLaunched) {
+            let transitions = [
+              ['fadeInDown', 'fadeOutLeft'],
+              ['rollIn', 'rollOut'],
+              ['zoomInRight', 'zoomOutDown'],
+              ['bounceInUp', 'bounceOutUp']
+            ]
+            let yuu = new Image()
+            yuu.style.position = 'fixed'
+            yuu.style.maxHeight = '50%'
+            yuu.style.top = `${Math.floor(Math.random() * 50)}%`
+            yuu.style.left = `${Math.floor(Math.random() * 70)}%`
+            yuu.className = 'animated ' + transitions[this.yuuCounter][0]
+            yuu.src = 'flyuu.png'
+            document.getElementById('yuu-launcher').appendChild(yuu)
+            this.yuuLaunched = true
+            setTimeout(() => {
+              yuu.className = 'animated ' + transitions[this.yuuCounter][1]
+              this.yuuCounter++
+              if (this.yuuCounter >= transitions.length) {
+                this.yuuCounter = 0
+              }
+              this.yuuLaunched = false
+              setTimeout(() => {
+                yuu.remove()
+              }, 900)
+            }, 900)
+          }
+          break
         case 6:
           app.setDay(1)
           break
