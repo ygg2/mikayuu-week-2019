@@ -27,7 +27,7 @@ let day = [
       event: 1
     },
     anim: {
-      images: ['heart.jpg', 'yuu_heart.jpg'], // heart, blood vial
+      images: ['heart.jpg', 'yuu_heart.jpg'],
       enter: 'animated flipInY',
       leave: 'animated flipOutY'
     },
@@ -67,7 +67,8 @@ let day = [
       by: 'Arillow',
       link: 'https://archiveofourown.org/works/7842331/chapters/',
       css: {
-        fontFamily: 'monospace'
+        fontFamily: 'monospace',
+        fontSize: '18px'
       }
     }
   },
@@ -81,9 +82,9 @@ let day = [
     },
     color: '#ffffcc',
     image: '',
-    special: {},
+    special: {}, // a bit smaller than stab.png ratio
     anim: {
-      images: ['', ''],
+      images: ['sun.jpg', 'suit_yuu.png'],
       enter: 'animated lightSpeedIn',
       leave: 'animated lightSpeedOut'
     },
@@ -141,7 +142,7 @@ let day = [
       description: 'Remembrance\nConnection\nTrue Love'
     },
     color: '#ccffff',
-    image: 'mika_water.jpg', // mika
+    image: 'mika_water.jpg',
     special: {
       image: 'twelve_to_one.png',
       event: 5,
@@ -177,7 +178,8 @@ let day = [
     color: '#cc99ff',
     image: '', // sleepy mkys
     special: {
-      image: ''
+      image: '',
+      event: 6
     },
     anim: {
       images: ['starmie.png', 'staryu.png'],
@@ -208,7 +210,7 @@ let day = [
     image: '', // yuu seraph in white
     special: {
       text: 'Black',
-      event: 6
+      event: 7
     },
     anim: {
       images: ['', ''],
@@ -239,10 +241,10 @@ let day = [
     image: '', // mika seraph in black
     special: {
       text: 'White',
-      event: 7
+      event: 8
     },
     anim: {
-      images: ['feathers.jpg', ''], // feathers
+      images: ['feathers.jpg', ''],
       enter: 'animated jackInTheBox',
       leave: 'animated zoomOut'
     },

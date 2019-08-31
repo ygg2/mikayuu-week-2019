@@ -1,8 +1,8 @@
 // get current day
 let day_offset = 3
-//let today = new Date().getDay() + day_offset
-let today = 0
-
+let today = new Date().getDay() + day_offset
+if (today >= 7) today -= 7
+today = 0
 // load from hash
 let _hash = parseInt(window.location.hash.slice(1), 10)
 if (_hash != NaN && _hash > 0 && _hash < 8) {
@@ -19,8 +19,10 @@ Vue.component('mikayuu-flower', {
   },
   template: `
   <div class="tile is-child box is-filled">
-    <button class="button no-background cover-tile" @click="toggleContent">
-      <img :src="flower.image" :alt="flower.name">
+    <button
+      class="button no-background cover-tile flower"
+      @click="toggleContent"
+      :style="fullBackground">
       <transition
         enter-active-class="animated slideInDown faster"
         leave-active-class="animated slideOutUp faster"
@@ -49,6 +51,16 @@ Vue.component('mikayuu-flower', {
   methods: {
     toggleContent() {
       this.active = !this.active
+    }
+  },
+  computed: {
+    fullBackground() {
+      return {
+        backgroundOrigin: 'padding-box',
+        backgroundImage: `url(./${this.flower.image})`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover'
+      }
     }
   }
 })
@@ -112,7 +124,6 @@ Vue.component('mikayuu-special', {
   },
   methods: {
     eventPerform(event) {
-      console.log(event)
       switch (event) {
         case 1:
           this.secondImage = true
@@ -154,9 +165,11 @@ Vue.component('mikayuu-special', {
           }
           break
         case 6:
-          app.setDay(1)
           break
         case 7:
+          app.setDay(1)
+          break
+        case 8:
           app.setDay(-1)
           break
       }
