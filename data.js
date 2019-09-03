@@ -1,14 +1,13 @@
-// data 4294967295
 // the most aesthetic: red, yellow, purple
-// %done:  19/45
+// %done:  28/45
 // red:    6/7
 // orange: 2/5 (idk)
-// yellow: 1/5 (idk) (keep the images white!!)
+// yellow: 3/5 (idk) (keep the images white!!)
 // green:  2/8
 // blue:   5/5
-// purple: 4/7 (honestly what does this one do)
-// black:  0/4 (switch theme)
-// white:  1/4 (switch theme)
+// purple: 7/7 (star falling with snow component)
+// black:  1/4 (switch theme)
+// white:  2/4 (switch theme)
 let day = [
   // day 1
   {
@@ -172,13 +171,13 @@ let day = [
     foreground: 'star_watching.png',
     flower: {
       name: 'lavender',
-      image: '',
+      image: 'lavender.png',
       description: 'Patience\nSerenity\nSilence'
     },
     color: '#cc99ff',
-    image: '', // sleepy mkys
+    image: 'sleepies.jpg',
     special: {
-      image: '',
+      image: 'moon.jpg',
       event: 6
     },
     anim: {
@@ -203,7 +202,7 @@ let day = [
     theme: 'black',
     flower: {
       name: 'black dahlia',
-      image: '',
+      image: 'black_dahlia.png',
       description: 'Elegance\nMajesty\nInstability'
     },
     color: 'linear-gradient(to bottom right, black, white)',
@@ -234,7 +233,7 @@ let day = [
     theme: 'white',
     flower: {
       name: 'lily of the valley',
-      image: '',
+      image: 'lily_of_the_valley.jpg',
       description: 'Happiness\nModesty\nPurity'
     },
     color: 'linear-gradient(to bottom right, black, white)',
