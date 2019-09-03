@@ -6,7 +6,7 @@
 // green:  2/8
 // blue:   5/5
 // purple: 7/7 (star falling with snow component)
-// black:  1/4 (switch theme)
+// black:  2/4 (switch theme)
 // white:  2/4 (switch theme)
 let day = [
   // day 1
@@ -212,7 +212,7 @@ let day = [
       event: 7
     },
     anim: {
-      images: ['', ''],
+      images: ['tree.png', ''],
       enter: 'animated jackInTheBox',
       leave: 'animated zoomOut'
     },
