@@ -10,12 +10,13 @@ footer.container {
   margin-top: 1rem;
 }
 
-.day-background, .spec-background {
+.day-background, .spec-background, #special-effects {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+  pointer-events: none;
 }
 
 .box {
@@ -162,6 +163,10 @@ footer.container {
 .color-black a:hover {
   color: gray;
 }
+.color-black .button {
+  background-color: #4a4a4a;
+  color: white;
+}
 
 .expand-tile {
   position: relative;
@@ -183,6 +188,35 @@ footer.container {
   /* safari doesn't respect overflow on absolutely positioned element */
   border-radius: 6px;
   overflow: hidden;
+}
+
+@-webkit-keyframes starAnim {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes starAnim {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 100%;
+    opacity: 1;
+  }
+}
+
+.starAnim {
+  -webkit-animation-name: starAnim;
+  -webkit-animation-duration: 10s;
+  animation-name: starAnim;
+  animation-duration: 10s;
 }
 
 @media (max-width: 768px) {

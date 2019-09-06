@@ -117,6 +117,7 @@ Vue.component('mikayuu-special', {
   `,
   data() {
     return {
+      hasEffect: false,
       secondImage: false,
       yuuLaunched: false,
       yuuCounter: 0
@@ -165,6 +166,20 @@ Vue.component('mikayuu-special', {
           }
           break
         case 6:
+          if (!this.hasEffect) {
+            setInterval(()=> {
+              let star = new Image()
+              star.style.position = 'absolute'
+              star.style.left = `${Math.floor(Math.random() * 100)}%`
+              star.className = 'starAnim'
+              let _remove = () => { star.remove() }
+              star.addEventListener('webkitAnimationEnd', _remove)
+              star.addEventListener('animationend', _remove)
+              star.src = 'star.png'
+              document.getElementById('special-effects').appendChild(star)
+            }, 600)
+            this.hasEffect = true
+          }
           break
         case 7:
           app.setDay(1)
