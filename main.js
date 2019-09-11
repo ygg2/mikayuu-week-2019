@@ -130,7 +130,16 @@ Vue.component('mikayuu-special', {
           this.secondImage = true
           break
         case 2:
+          if (this.hasEffect) break
+          this.hasEffect = true
+          app.day.anim.images = app.day.anim.images.map(
+            img => img.slice(0, -4) + '_shadow.jpg'
+          )
+          break
         case 3:
+          let tiles = document.getElementById('mikayuu-tiles')
+          tiles.classList.add('become-color')
+          break
         case 4:
           app.day.specText = 'are you still my family?'
           app.day.theme = 'dark-green'

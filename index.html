@@ -26,7 +26,7 @@
         <img v-if="day.background" :src="day.background" class="cover-tile">
         <img v-if="day.foreground" :src="day.foreground" class="side-image">
       </div>
-      <div class="main container">
+      <div id="mikayuu-tiles" class="main container">
         <div class="tile is-ancestor">
           <div class="tile is-parent is-3 is-vertical">
             <mikayuu-flower :flower="day.flower"></mikayuu-flower>

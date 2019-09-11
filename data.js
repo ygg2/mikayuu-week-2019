@@ -53,9 +53,11 @@ let day = [
     },
     color: '#ff764a',
     image: 'fireyuu.jpg',
-    special: {},
+    special: {
+      event: 2
+    },
     anim: {
-      images: ['', ''],
+      images: ['', 'mika_back.jpg'],
       enter: 'animated rotateIn',
       leave: 'animated rotateOut'
     },
@@ -81,7 +83,9 @@ let day = [
     },
     color: '#ffffcc',
     image: '',
-    special: {}, // a bit smaller than stab.png ratio
+    special: {
+      event: 3
+    },
     anim: {
       images: ['sun.jpg', 'suit_yuu.png'],
       enter: 'animated lightSpeedIn',
@@ -146,7 +150,7 @@ let day = [
       image: 'twelve_to_one.png',
       event: 5,
       yuu: true
-    }, 
+    },
     anim: {
       images: ['sky.jpg', 'promise.png'],
       enter: 'animated fadeInUp',
