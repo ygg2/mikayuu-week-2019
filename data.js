@@ -1,13 +1,13 @@
 // the most aesthetic: red, yellow, purple
-// %done:  28/45
+// %done:  35/47
 // red:    6/7
-// orange: 2/5 (idk)
-// yellow: 3/5 (idk) (keep the images white!!)
+// orange: 7/7
+// yellow: 4/5
 // green:  2/8
 // blue:   5/5
-// purple: 7/7 (star falling with snow component)
-// black:  2/4 (switch theme)
-// white:  2/4 (switch theme)
+// purple: 7/7
+// black:  2/4
+// white:  2/4
 let day = [
   // day 1
   {
@@ -54,10 +54,11 @@ let day = [
     color: '#ff764a',
     image: 'fireyuu.jpg',
     special: {
+      image: 'sunset.jpg',
       event: 2
     },
     anim: {
-      images: ['', 'mika_back.jpg'],
+      images: ['sanguinem.jpg', 'mika_back.jpg'],
       enter: 'animated rotateIn',
       leave: 'animated rotateOut'
     },
@@ -84,6 +85,7 @@ let day = [
     color: '#ffffcc',
     image: '',
     special: {
+      image: 'sunrise.jpg',
       event: 3
     },
     anim: {
