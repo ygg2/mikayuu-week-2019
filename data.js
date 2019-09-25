@@ -1,13 +1,12 @@
-// the most aesthetic: red, yellow, purple
-// %done:  35/47
+// %done:  42/47
 // red:    6/7
 // orange: 7/7
-// yellow: 4/5
-// green:  2/8
+// yellow: 5/5
+// green:  4/8
 // blue:   5/5
 // purple: 7/7
-// black:  2/4
-// white:  2/4
+// black:  4/4
+// white:  4/4
 let day = [
   // day 1
   {
@@ -83,7 +82,7 @@ let day = [
       description: 'Devotion\nLoyalty\nYearning'
     },
     color: '#ffffcc',
-    image: '',
+    image: 'sunshower.jpg',
     special: {
       image: 'sunrise.jpg',
       event: 3
@@ -120,7 +119,7 @@ let day = [
       event: 4
     },
     anim: {
-      images: ['', ''], // yuu eye, yuu sleeve & sword
+      images: ['yuu_eye.jpg', 'yuu_sword.jpg'],
       enter: 'animated flipInX',
       leave: 'animated flipOutX'
     },
@@ -212,13 +211,13 @@ let day = [
       description: 'Elegance\nMajesty\nInstability'
     },
     color: 'linear-gradient(to bottom right, black, white)',
-    image: '', // yuu seraph in white
+    image: 'bw_21.jpg', // yuu seraph in white
     special: {
       text: 'Black',
       event: 7
     },
     anim: {
-      images: ['tree.png', ''],
+      images: ['tree.png', 'horn.png'],
       enter: 'animated jackInTheBox',
       leave: 'animated zoomOut'
     },
@@ -243,13 +242,13 @@ let day = [
       description: 'Happiness\nModesty\nPurity'
     },
     color: 'linear-gradient(to bottom right, black, white)',
-    image: '', // mika seraph in black
+    image: 'bw_22.jpg', // mika seraph in black
     special: {
       text: 'White',
       event: 8
     },
     anim: {
-      images: ['feathers.jpg', ''],
+      images: ['feathers.jpg', 'halo.png'],
       enter: 'animated jackInTheBox',
       leave: 'animated zoomOut'
     },

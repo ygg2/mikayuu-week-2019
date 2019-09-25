@@ -193,6 +193,10 @@ footer.container {
   color: white;
 }
 
+.color-white a {
+  color: #62575F;
+}
+
 .expand-tile {
   position: relative;
   padding-bottom: 100%;
