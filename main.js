@@ -2,7 +2,7 @@
 let day_offset = 3
 let today = new Date().getDay() + day_offset
 if (today >= 7) today -= 7
-today = 0
+if (today >= 6) today = 0 // no early access
 // load from hash
 let _hash = parseInt(window.location.hash.slice(1), 10)
 if (_hash != NaN && _hash > 0 && _hash < 8) {
@@ -143,6 +143,8 @@ Vue.component('mikayuu-special', {
         case 4:
           app.day.specText = 'are you still my family?'
           app.day.theme = 'dark-green'
+          app.day.image = 'family2.jpg'
+          this.secondImage = true
           break
         case 5:
           if (!this.yuuLaunched) {

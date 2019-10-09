@@ -1,12 +1,3 @@
-// %done:  42/47
-// red:    6/7
-// orange: 7/7
-// yellow: 5/5
-// green:  4/8
-// blue:   5/5
-// purple: 7/7
-// black:  4/4
-// white:  4/4
 let day = [
   // day 1
   {
@@ -18,7 +9,7 @@ let day = [
       description: 'Pride\nShyness\nStrength of Love'
     },
     color: 'linear-gradient(to top, #46080b, #ff0000)',
-    image: 'sanguinem.png',
+    image: 'vampires.jpg',
     special: {
       image: 'mika_eyes_blue.jpg',
       image2: 'mika_eyes_red.jpg',
@@ -113,9 +104,10 @@ let day = [
       description: 'Fickleness\nApology\nUnity\nFamily'
     },
     color: '#80d2c2',
-    image: '', // family photo
+    image: 'family.jpg',
     special: {
-      image: '', // map
+      image: 'map.jpg',
+      image2: 'map2.jpg',
       event: 4
     },
     anim: {
@@ -125,11 +117,12 @@ let day = [
     },
     quote: {
       text:
-        '“Mika, you’re family. You taught me what that meant; you showed me what it’s like to have one, a real one.”',
-      fic: 'the world is cruel',
-      by: 'sutera',
-      link: 'https://archiveofourown.org/works/4157064',
+        '“...Fine. Say what you want.”\nIf Mika was expecting a response to that last sentence, he wasn\'t prepared for the one that escaped Yuu\'s lips.\n“...I\'m sorry.”',
+      fic: 'Green',
+      by: 'Marlie_Amane',
+      link: 'https://archiveofourown.org/works/9046871',
       css: {
+        whiteSpace: 'pre-wrap',
         color: '#ecd6b5',
         textAlign: 'center',
         fontFamily: '"IM Fell Double Pica", serif',
@@ -159,13 +152,15 @@ let day = [
     },
     quote: {
       text:
-        'The blue sky welcomed him, and Yuu kept looking up at the warm spring sky. He sighed. It was the same color as Mika’s cerulean eyes.',
-      fic: 'Always with You',
-      by: 'Tsukimi11',
-      link: 'https://archiveofourown.org/works/11600121/chapters/26074983',
+        'I just want to remind you that you will never be alone.\n\nSo Mika, please smile again.',
+      fic: 'Forget-me-not',
+      by: '00_Zygarde',
+      link: 'https://archiveofourown.org/works/8288188',
       css: {
+        fontStyle: 'oblique',
+        whiteSpace: 'pre-wrap',
         textAlign: 'center',
-        fontWeight: 'lighter'
+        fontWeight: 'lighter',
       }
     }
   },
@@ -192,10 +187,10 @@ let day = [
     },
     quote: {
       text:
-        'Relaxing into Yuu’s arms, Mika wills himself to close his eyes and just listen to Yuu’s heartbeat.',
-      fic: 'Dreams',
-      by: 'Lizzeroni, Phantom_Thieves, Trashy_Rina',
-      link: 'https://archiveofourown.org/works/13593174',
+        "Yuu falls asleep before Mika does, but Mika can’t find the heart to mind. He simply nudges his hair from where it’s poking his arm before curling an arm around him and closing his eyes.",
+      fic: '( make for me ) a soft universe ',
+      by: 'wheretheskiesend',
+      link: 'https://archiveofourown.org/works/20741702',
       css: {
         color: '#ccbbff',
         fontFamily: '"Bentham", serif'
