@@ -2,7 +2,7 @@
 let day_offset = 3
 let today = new Date().getDay() + day_offset
 if (today >= 7) today -= 7
-today = 6
+
 // load from hash
 let _hash = parseInt(window.location.hash.slice(1), 10)
 if (_hash != NaN && _hash > 0 && _hash < 8) {
